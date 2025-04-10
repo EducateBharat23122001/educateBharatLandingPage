@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
+import { Helmet } from 'react-helmet';
 
 function App() {
   return (
     <div className="App">
+       <Helmet>
+        <meta name="fast2sms" content="vyXM01HUMDHbKlyv11GFcylwyf8bh2P" />
+      </Helmet>
       {/* Navigation */}
       <nav className="navbar">
         <div className="container">
