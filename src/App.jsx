@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
        <Helmet>
-        <meta name="fast2sms" content="vyXM01HUMDHbKlyv11GFcylwyf8bh2P" />
+        <meta name="fast2sms" content="4qYk4oHGv0RZWA0O4uCydtDAaezTmiS3" />
       </Helmet>
       {/* Navigation */}
       <nav className="navbar">
