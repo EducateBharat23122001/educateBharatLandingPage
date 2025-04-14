@@ -15,9 +15,9 @@ function App() {
       <AuthProvider>
         <div className="App">
           <Helmet>
-            <meta name="fast2sms" content="4qYk4oHGv0RZWA0O4uCydtDAaezTmiS3" />
+            <meta name="fast2sms" content="uKUwuyymxtG6qVjMGj1wtHILvJIFnsCl" />
           </Helmet>
-          
+
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
