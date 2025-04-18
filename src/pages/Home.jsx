@@ -11,7 +11,7 @@ const Home = () => {
       <Helmet>
         <meta name="fast2sms" content="4qYk4oHGv0RZWA0O4uCydtDAaezTmiS3" />
       </Helmet>
-      
+
       {/* Navigation */}
       <nav className="navbar">
         <div className="container">
@@ -115,6 +115,13 @@ const Home = () => {
               <p>+91 9876543210</p>
             </div>
           </div>
+          <div className="footer-section">
+              <h4>Legal</h4>
+              <ul>
+                <li><a href="/privacy-policy">Privacy Policy</a></li>
+                <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+              </ul>
+            </div>
           <div className="footer-bottom">
             <p>&copy; {new Date().getFullYear()} Educate Bharat. All rights reserved.</p>
           </div>

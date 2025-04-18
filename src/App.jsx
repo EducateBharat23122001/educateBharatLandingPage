@@ -8,6 +8,8 @@ import Home from './pages/Home';
 import Profile from './pages/Profile';
 import PrivateRoute from './components/PrivateRoute';
 import './App.css';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsAndConditions from './pages/TermsAndConditions';
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/" element={
               <PrivateRoute>
                 <Home />
