@@ -139,6 +139,8 @@ const PrivacyPolicy = () => {
               <ul>
                 <li><a href="/privacy-policy">Privacy Policy</a></li>
                 <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+                <li><a href="/deleteaccount">Delete Account</a></li>
+           
               </ul>
             </div>
           </div>

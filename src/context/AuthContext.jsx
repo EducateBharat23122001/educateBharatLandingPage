@@ -39,8 +39,9 @@ export const AuthProvider = ({ children }) => {
       }, {
         withCredentials: true
       });
-      
-      setUser(response.data.user);
+      console.log(response.data)
+      localStorage.setItem('user',JSON.stringify(response.data.data.user))
+      setUser(response.data.data.user);
       setIsAuthenticated(true);
       return { success: true };
     } catch (error) {
@@ -90,6 +91,29 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
+  const deleteAccountRequest = async () => {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_BASE_URL}/auth/delete-account-request`,
+        {},
+        {
+          withCredentials: true
+        }
+      );
+      
+      return { 
+        success: true, 
+        message: response.data.message || 'Account deletion request sent successfully' 
+      };
+    } catch (error) {
+      console.error('Delete account request failed:', error);
+      return { 
+        success: false, 
+        message: error.response?.data?.message || 'Failed to send account deletion request' 
+      };
+    }
+  };
+
   return (
     <AuthContext.Provider value={{ 
       user, 
@@ -98,7 +122,8 @@ export const AuthProvider = ({ children }) => {
       login, 
       logout, 
       register, 
-      sendOtp 
+      sendOtp,
+      deleteAccountRequest
     }}>
       {children}
     </AuthContext.Provider>

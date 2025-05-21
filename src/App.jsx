@@ -10,6 +10,7 @@ import PrivateRoute from './components/PrivateRoute';
 import './App.css';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsAndConditions from './pages/TermsAndConditions';
+import DeleteAccount from './pages/DeleteAccount';
 
 function App() {
   return (
@@ -35,6 +36,14 @@ function App() {
                 <Profile />
               </PrivateRoute>
             } />
+
+            <Route path="/deleteaccount" element={
+              <PrivateRoute>
+                <DeleteAccount />
+              </PrivateRoute>
+            } />
+
+            {/* DeleteAccount */}
           </Routes>
         </div>
       </AuthProvider>
